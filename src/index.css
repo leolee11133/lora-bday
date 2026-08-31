@@ -1,0 +1,241 @@
+:root {
+  /* paper + ink */
+  --paper: #f9f4ea;
+  --paper-deep: #f2e9d8;
+  --card: #fffdf7;
+  --ink: #4a3b33;
+  --ink-soft: #7a6a5f;
+  --ink-faint: #a3958a;
+
+  /* pastels */
+  --blush: #f6dde4;
+  --rose: #c98a9a;
+  --rose-deep: #a86475;
+  --butter: #f8ecc9;
+  --lavender: #e9e2f4;
+  --sky: #dceaf2;
+  --sage: #e2ecd8;
+
+  --font-script: 'Sacramento', cursive;
+  --font-hand: 'Caveat', cursive;
+  --font-hand-2: 'La Belle Aurore', cursive;
+  --font-body: 'Lora', Georgia, serif;
+
+  --shadow-soft: 0 2px 8px rgba(90, 62, 54, 0.1), 0 10px 26px rgba(90, 62, 54, 0.08);
+  --shadow-lift: 0 6px 14px rgba(90, 62, 54, 0.14), 0 18px 40px rgba(90, 62, 54, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  /* soft paper wash + grain */
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 8%, rgba(246, 221, 228, 0.5), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 88% 20%, rgba(233, 226, 244, 0.45), transparent 60%),
+    radial-gradient(ellipse 75% 60% at 50% 100%, rgba(248, 236, 201, 0.4), transparent 65%);
+  background-attachment: fixed;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* film-grain overlay, fixed & non-interactive */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(201, 138, 154, 0.3);
+}
+
+/* ---------- shared type ---------- */
+
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.hand {
+  font-family: var(--font-hand);
+}
+
+.hand2 {
+  font-family: var(--font-hand-2);
+}
+
+/* ---------- shared bits ---------- */
+
+.page {
+  min-height: 100dvh;
+  position: relative;
+}
+
+.back-link {
+  position: fixed;
+  top: max(14px, env(safe-area-inset-top));
+  left: 16px;
+  z-index: 60;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  padding: 6px 14px 8px;
+  border-radius: 999px;
+  background: rgba(255, 253, 247, 0.82);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 4px rgba(90, 62, 54, 0.12);
+  border: 1px solid rgba(90, 62, 54, 0.08);
+  transition: transform 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-link:hover {
+  color: var(--rose-deep);
+  transform: translateX(-2px);
+}
+
+.back-link:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px dashed var(--rose);
+  outline-offset: 3px;
+}
+
+/* handwritten sticker-ish labels sprinkled around pages */
+.scribble {
+  font-family: var(--font-hand);
+  color: var(--ink-soft);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* small piece of translucent tape */
+.tape {
+  position: absolute;
+  width: 86px;
+  height: 26px;
+  background: rgba(250, 244, 227, 0.75);
+  border-left: 1px dotted rgba(90, 62, 54, 0.12);
+  border-right: 1px dotted rgba(90, 62, 54, 0.12);
+  box-shadow: 0 1px 3px rgba(90, 62, 54, 0.12);
+  pointer-events: none;
+}
+
+/* ---------- polaroid ---------- */
+
+.polaroid {
+  background: var(--card);
+  padding: 10px 10px 38px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(90, 62, 54, 0.06);
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.polaroid .photo-frame {
+  overflow: hidden;
+  background: var(--paper-deep);
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 7px;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+button.polaroid-btn {
+  display: block;
+  text-align: inherit;
+}
+
+button.polaroid-btn:hover .polaroid,
+button.polaroid-btn:focus-visible .polaroid {
+  transform: rotate(0deg) scale(1.035) !important;
+  box-shadow: var(--shadow-lift);
+  z-index: 5;
+}
+
+/* photo placeholder (when a folder has no images yet) */
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--ink-faint);
+  background:
+    repeating-linear-gradient(45deg, rgba(201, 138, 154, 0.07) 0 10px, transparent 10px 20px),
+    var(--paper-deep);
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

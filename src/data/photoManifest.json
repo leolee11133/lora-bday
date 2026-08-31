@@ -1,0 +1,84 @@
+{
+  "ashley": [
+    "/photos/ashley/ashley-01.jpg",
+    "/photos/ashley/ashley-02.jpg",
+    "/photos/ashley/ashley-03.jpg",
+    "/photos/ashley/ashley-04.jpg",
+    "/photos/ashley/ashley-05.jpg",
+    "/photos/ashley/ashley-06.jpg"
+  ],
+  "elaina": [
+    "/photos/elaina/elaina-01.jpg",
+    "/photos/elaina/elaina-02.jpg",
+    "/photos/elaina/elaina-03.jpg",
+    "/photos/elaina/elaina-04.jpg",
+    "/photos/elaina/elaina-05.jpg"
+  ],
+  "genevieve": [
+    "/photos/genevieve/genevieve-01.jpg",
+    "/photos/genevieve/genevieve-02.jpg",
+    "/photos/genevieve/genevieve-03.jpg",
+    "/photos/genevieve/genevieve-04.jpg"
+  ],
+  "group": [],
+  "intro": [],
+  "jennifer": [
+    "/photos/jennifer/jennifer-01.jpg",
+    "/photos/jennifer/jennifer-02.jpg",
+    "/photos/jennifer/jennifer-03.jpg",
+    "/photos/jennifer/jennifer-04.jpg"
+  ],
+  "lakshmi": [
+    "/photos/lakshmi/lakshmi-01.jpg",
+    "/photos/lakshmi/lakshmi-02.jpg",
+    "/photos/lakshmi/lakshmi-03.jpg",
+    "/photos/lakshmi/lakshmi-04.jpg"
+  ],
+  "leo": [
+    "/photos/leo/leo-01.jpg",
+    "/photos/leo/leo-02.jpg",
+    "/photos/leo/leo-03.jpg",
+    "/photos/leo/leo-04.jpg",
+    "/photos/leo/leo-05.jpg",
+    "/photos/leo/leo-06.jpg"
+  ],
+  "navya": [
+    "/photos/navya/navya-01.jpg",
+    "/photos/navya/navya-02.jpg",
+    "/photos/navya/navya-03.jpg",
+    "/photos/navya/navya-04.jpg",
+    "/photos/navya/navya-05.jpg",
+    "/photos/navya/navya-06.jpg"
+  ],
+  "olivia": [
+    "/photos/olivia/olivia-01.jpg",
+    "/photos/olivia/olivia-02.jpg",
+    "/photos/olivia/olivia-03.jpg",
+    "/photos/olivia/olivia-04.jpg"
+  ],
+  "parents": [
+    "/photos/parents/parents-01.jpg",
+    "/photos/parents/parents-02.jpg",
+    "/photos/parents/parents-03.jpg",
+    "/photos/parents/parents-04.jpg",
+    "/photos/parents/parents-05.jpg"
+  ],
+  "parnavi": [
+    "/photos/parnavi/parnavi-01.jpg",
+    "/photos/parnavi/parnavi-02.jpg",
+    "/photos/parnavi/parnavi-03.jpg",
+    "/photos/parnavi/parnavi-04.jpg"
+  ],
+  "radhika": [
+    "/photos/radhika/radhika-01.jpg",
+    "/photos/radhika/radhika-02.jpg",
+    "/photos/radhika/radhika-03.jpg",
+    "/photos/radhika/radhika-04.jpg"
+  ],
+  "siri": [
+    "/photos/siri/siri-01.jpg",
+    "/photos/siri/siri-02.jpg",
+    "/photos/siri/siri-03.jpg",
+    "/photos/siri/siri-04.jpg"
+  ]
+}
