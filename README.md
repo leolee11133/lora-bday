@@ -42,6 +42,18 @@ scrapbook PDF; replace or add to them freely.
 If a folder is empty the site shows pretty placeholder frames telling you
 where to put the files, so nothing ever looks broken.
 
+## Publishing changes
+
+The site is live at **https://leolee11133.github.io/lora-bday/**.
+After changing anything (photos, letters, music), publish with:
+
+```bash
+npm run deploy
+```
+
+It builds the site and pushes it to the `gh-pages` branch of
+github.com/leolee11133/lora-bday. Give GitHub a minute or two to update.
+
 ## Music
 
 Put a song at `public/audio/birthday-song.mp3`. The "♫ our soundtrack" button
